@@ -1,15 +1,17 @@
 #include <iostream>
 
-#include <glad/glad.h>
-#include <GLFW/glfw3.h>
-
+#include "components\Context.h"
 
 int main()
 {
-	int res = glfwInit();
-	std::cout << res << std::endl;
+	Context context(800, 600);
 
-	std::cin.get();
+	while (!context.ShouldClose()) {
+		context.ProcessInput();
+
+		context.SwapBuffers();
+		context.PollEvents();
+	}
 
 	return 0;
 }
