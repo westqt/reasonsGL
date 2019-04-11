@@ -3,9 +3,15 @@
   <ItemGroup>
     <ClCompile Include="src\main.cpp" />
     <ClCompile Include="src\glad.c" />
-    <ClCompile Include="src\components\Context.cpp" />
+    <ClCompile Include="src\context\Context.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="src\components\Context.h" />
+    <ClInclude Include="src\shaders\Shader.h" />
+    <ClInclude Include="src\context\Context.h" />
+    <ClInclude Include="src\elements\Triangle.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\shaders\shader.vert" />
+    <None Include="src\shaders\shader.frag" />
   </ItemGroup>
 </Project>
